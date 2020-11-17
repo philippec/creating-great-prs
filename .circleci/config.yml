@@ -7,6 +7,17 @@ jobs:
     executor: python/default
     steps: 
       - checkout 
+      - python/install-packages:
+          pkg-manager: pip
+      - python/install-packages:
+          pip-dependency-file: requirements.txt
+          pkg-manager: pip
+      - python/install-packages:
+          args: unittest-xml-reporting
+          pkg-manager: pip
+          pypi-cache: false
       - run:
           name: Run Unit Tests
-          command: sh test.sh
+          command: python test.py
+      - store_test_results:
+          path: test-reports
