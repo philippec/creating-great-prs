@@ -3,18 +3,29 @@ try:
     import unittest2 as unittest
 except ImportError:
     import unittest
+import emoji
 
-class SimpleTest(unittest.TestCase):
-    @unittest.skip("demonstrating skipping")
-    def test_skipped(self):
-        self.fail("shouldn't happen")
 
-    def test_pass(self):
-        self.assertEqual(10, 7 + 3)
+class BookTest(unittest.TestCase):
+    
+    def setUp(self):
+        with open('Book/Chapters/01.md', 'r') as file:
+            self.chapter01 = file.read().replace('\n', '')
 
-    @unittest.skip("get a green build")
-    def test_fail(self):
-        self.assertEqual(11, 7 + 3)
+    def test_chapter01(self):
+        self.assertEqual(self.chapter01, '# Chapter 1It was a dark and stormy night...')
+
+    @unittest.skip("not implemented yet")
+    def test_characters(self):
+        self.fail("not implemented yet")
+
+    @unittest.skip("not implemented yet")
+    def test_places(self):
+        self.fail("not implemented yet")
+
+    @unittest.skip("not implemented yet")
+    def test_tech(self):
+        self.fail("not implemented yet")
 
 if __name__ == '__main__':
     import xmlrunner
