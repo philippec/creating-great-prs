@@ -1,8 +1,8 @@
 # Creating Great PRs
 ## Philippe Casgrain
-### Senior Staff Software Developer, LightspeedHQ
+### Senior Staff Software Developer, Lightspeed Commerce
 
-Pull Requests (PRs) are one of the fundamental building blocks of software development. In this Tech Talk, we'll go over elements of great PRs and show you how to improve your own PRs by demystifying interactive rebases and staging changes.
+Pull Requests (PRs) are one of the fundamental building blocks of software development. In this presentation, we'll go over elements of great PRs and show you how to improve your own PRs by demystifying interactive rebases and staging changes.
 
 ---
 
@@ -33,7 +33,7 @@ You don't have to do everything that the reviewer says, in fact sometimes the re
   * Individual unit of change
   * Should not break the build by itself (`git bisect`)
   * Refactoring commits should be isolated
-* Each commit message should be associated with a Jira ticket
+* Each commit message should be associated with some kind of ticket or issue
   * Subject line is short
   * Details in the commit message
 
