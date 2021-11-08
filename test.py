@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import random
 try:
     import unittest2 as unittest
